@@ -1,0 +1,232 @@
+:root {
+    --brand-color: rgb(180, 9, 9);
+    --callbutton-widget-width: 300px;
+    --callbutton-widget-height: 275px;
+
+    --callbutton-widget-button-width: 140px;
+    --callbutton-widget-button-heigth: 55px;
+
+    --callbutton-widget-indent: 48px;
+}
+
+.callbutton-widget {
+    position: fixed;
+    bottom: var(--callbutton-widget-indent);
+    right: var(--callbutton-widget-indent);
+
+    text-align: right;
+
+    background: #dbcfcf;
+    border-radius: 32px;
+    border: none;
+
+    z-index: 5;
+}
+
+.callbutton {
+    display: block;
+
+    width: var(--callbutton-widget-button-width);
+    height: var(--callbutton-widget-button-height);
+
+    padding: 0;
+    padding-top: 0px;
+
+    background: hsla(143, 100%, 30%, 0.651);
+    border-radius: 32px;
+    border: none;
+
+    z-index: 6;
+    cursor: pointer;
+}
+
+.callbutton-widget iframe {
+    display: none;
+
+    border: none;
+
+    width: var(--callbutton-widget-width);
+    height: var(--callbutton-widget-height);
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background: hsl(0, 4%, 84%);
+
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.14), 0px 1px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+
+    z-index: 10;
+}
+
+@media (max-width: calc(400px + 8px + 8px)) {
+    .callbutton-widget iframe {
+        width: calc(100vw - var(--callbutton-widget-indent) - var(--callbutton-widget-indent));
+    }
+}
+
+@media (max-height: calc(500px + 8px + 64px + 8px + 8px)) {
+    .callbutton-widget iframe {
+        height: calc(100vh - var(--callbutton-widget-indent) - var(--callbutton-widget-button-width-height) - var(--callbutton-widget-indent) - var(--callbutton-widget-indent));
+    }
+}
+
+.main-content-container {
+    margin: 0;
+    background: #e5e8eb;
+    padding: 15px;
+}
+
+.logo-icon-container {
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-icon {
+    height: 70px;
+}
+
+.header-container {
+    width: 100%;
+    height: fit-content;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: #3D5B68;
+}
+
+.footer-container {
+    width: 100%;
+    height: fit-content;
+    margin-top: 15px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: #810101;
+}
+
+.timing-container {
+    width: 100%;
+    height: 23px;
+    margin-top: 8px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: #8B9DA4;
+}
+
+.action-buttons-container {
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.action-button {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 0px solid #C5CED2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.action-button img {
+    margin-top: 0px;
+}
+
+.call {
+    background: #0aba01;
+}
+
+.hungup {
+    background: hsl(0, 99%, 37%);
+}
+
+.microphone {
+    background: hsl(198, 76%, 77%);
+}
+
+
+.connection-error {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.14), 0px 1px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+
+    width: 265px;
+
+    padding: 24px;
+
+    position: fixed;
+
+    bottom: var(--callbutton-widget-indent);
+    right: var(--callbutton-widget-indent);
+    z-index: 15;
+}
+
+.icon-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.connection-error img {
+    height: 30px;
+}
+
+.error-text-container {
+    margin-top: 18px;
+    width: 100%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+
+    text-align: center;
+    letter-spacing: 0.15px;
+
+    color: #3D5B68;
+}
+
+.close-button {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    cursor: pointer;
+}
+
+.close-button img {
+    width: 14px;
+    height: 14px;
+}
+.call-type-selection {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    font-family: 'Montserrat', sans-serif;
+    color: #3D5B68;
+    font-size: 16px;
+}
